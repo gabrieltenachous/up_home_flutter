@@ -12,10 +12,13 @@ class TextFieldWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return TextField(
-      decoration: InputDecoration(
-        labelText: label,
-        hintText: placeholder ?? label,
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 15),
+      child: TextField(
+        decoration: InputDecoration(
+          labelText: label,
+          hintText: placeholder ?? label,
+        ),
       ),
     );
   }

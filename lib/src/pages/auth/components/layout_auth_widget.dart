@@ -28,7 +28,7 @@ class LayoutAuthWidget extends StatelessWidget {
             child: Column(
               children: [
                 Container(
-                  height: 500,
+                  height: 550,
                   padding: const EdgeInsets.symmetric(
                     horizontal: 32,
                     vertical: 15,

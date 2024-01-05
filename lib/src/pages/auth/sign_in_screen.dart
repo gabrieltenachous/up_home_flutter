@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:up_home/src/config/theme_config.dart';
 import 'package:up_home/src/pages/auth/components/layout_auth_widget.dart';
+import 'package:up_home/src/pages/auth/forgot_password_screen.dart';
 import 'package:up_home/src/pages/auth/sign_up_screen.dart';
 import 'package:up_home/src/widgets/text_field_widget.dart';
 
@@ -22,7 +23,6 @@ class SiginIn extends StatelessWidget {
               fontWeight: FontWeight.w600,
             ),
           ),
-
           const SizedBox(
             height: 20,
           ),
@@ -52,11 +52,21 @@ class SiginIn extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                const Text(
-                  'Forgot Password?',
-                  style: TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.w600,
+                InkWell(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const ForgotPasswordScreen(),
+                      ),
+                    );
+                  },
+                  child: const Text(
+                    'Forgot Password?',
+                    style: TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.w600,
+                    ),
                   ),
                 ),
                 ElevatedButton(
@@ -79,7 +89,6 @@ class SiginIn extends StatelessWidget {
               ],
             ),
           ),
-          //39D2C0
           const SizedBox(
             height: 30,
           ),
